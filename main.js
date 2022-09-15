@@ -6,7 +6,7 @@ function init() {
 
 	/* カメラ */
 	camera = new THREE.PerspectiveCamera(
-		75,
+		45,
 		window.innerWidth / window.innerHeight,
 		0.1,
 		1000
@@ -22,7 +22,7 @@ function init() {
 	/* ボックスのサイズ決定、メッシュ、追加 */
 	const geometry = new THREE.BoxGeometry(2,2,2);// 幅、高さ、奥行き
 	// const material = new THREE.MeshBasicMaterial({color: 0x0000ff}); // 光源を必要としない関数
-	const texture = new THREE.TextureLoader().load("./textures/san3.webp");
+	const texture = new THREE.TextureLoader().load("./textures/san5.webp");
 	const material = new THREE.MeshBasicMaterial({map: texture});
 	cube = new THREE.Mesh(geometry, material); // ボックスとカラーをメッシュで合わせてキューブとして表現
 	scene.add(cube); //sceneに対してcubeをaddする
